@@ -1,12 +1,13 @@
 @charset "UTF-8";
 
-@import url('https://fonts.googleapis.com/css2?family+Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 @font-face {
     font-family: 'Android';
-    src: url('../fontes/idroid.otf') format('opentype'); 
+    src: url('fontes/idroid.otf') format("opentype");
     font-weight: normal;
 }
+
 * {
     margin: 0px;
     padding: 0px;
@@ -20,9 +21,9 @@
     --cor4: #1a5c37;
     --cor5: #063f1e;
 
-    --fonte-padrao: Arial, Verdana, Helvetica, sans-serif;
-    --fonte-destaque: 'Bebas Neue', cursive;
-    --font-android: 'Android', cursive;
+   --font-padrao: Arial, Verdana, Helvetica, sans-serif;
+   --font-destaque: 'Bebas Neue', cursive;
+   --fonte-android: 'Android', cursive;
 
 }
 body {
@@ -30,12 +31,8 @@ body {
     font-family: var(--fonte-padrao);
 }
 
-body main {
-    margin: auto;
-}
-
 a.external:after {
-    content: "\1F517";
+    content: "\00A0\1F517";
 
 }
 p {
@@ -73,16 +70,17 @@ header > p {
     padding-left: 10px;
     text-align: center;
     margin-bottom: 20px;
+    text-shadow: 0px 7px 7px rgba(0, 0, 0, 0.315);
 }
 
 nav {
     background-color: var(--cor5);
     padding: 10px;
-    box-shadow: 0px 7px 7px rgba(0, 0, 0, 0.493);
+    box-shadow: 0px 7px 7px rgba(0, 0, 0, 0.192);
 }
 
 nav > a {
-    color: var(--cor1);
+    color: white;
     padding: 10px;
     text-decoration: none;
     font-weight: bold;
@@ -98,9 +96,10 @@ nav > a:hover {
 
 main {
     background-color: white;
-    width: 800px;
-    margin: 0 auto;
-    margin: 0px 30px 30px 30px;
+    min-width: 280px;
+    max-width: 800px;
+    margin: auto;
+    margin-bottom: 30px;
     padding: 20px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.782);
     border-bottom-right-radius: 10px;
@@ -111,8 +110,9 @@ div.video > iframe {
     position: absolute;
     top: 5%;
     left: 5%;
-    width: 90%;
     height: 90%;
+    max-width: 100%;
+    height: auto;
 }
 
 div.video {
@@ -131,10 +131,6 @@ main p {
     font-size: 1em;
 } 
 
-main img {
-    width: 100%;
-}
-
 main img.small {
     max-width: 350px;
     margin: auto;
@@ -150,7 +146,7 @@ main  h1 {
 }
 
 main  h2 {
-    font-family: var(--font-android);
+    font-family: var(--fonte-android);
     font-weight: normal;
     color: var(--cor4);
     font-size: 1.3em;
@@ -159,7 +155,8 @@ main  h2 {
 }
 
 main > img {
-    width: 100%;
+    max-width: 100%;
+    height: auto;
 
 } 
 
